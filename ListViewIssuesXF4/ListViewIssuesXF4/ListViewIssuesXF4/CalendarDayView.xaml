@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewIssuesXF4"
+             x:Class="ListViewIssuesXF4.CalendarDayView"
+             x:DataType="local:DayGroupViewModel"
+             Spacing="0">
+    <Grid BackgroundColor="{DynamicResource PrimaryLight}" HeightRequest="40">
+        <Label Text="{Binding Day.Title}" Style="{DynamicResource SubtitleStyle}" TextColor="{DynamicResource PrimaryTextColor}" VerticalOptions="Center" Margin="8,0,0,0" />
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Title_Tapped" NumberOfTapsRequired="1" />
+        </Grid.GestureRecognizers>
+    </Grid>
+
+    <Grid BackgroundColor="{DynamicResource PrimaryLightest}" VerticalOptions="StartAndExpand" IsVisible="{Binding Day.Summary, Converter={StaticResource BooleanConverter}}">
+        <Label Text="{Binding Day.Summary}" BackgroundColor="{DynamicResource PrimaryLightest}" Margin="8,0,0,0" />
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Title_Tapped" NumberOfTapsRequired="1" />
+        </Grid.GestureRecognizers>
+    </Grid>
+
+    <!--<ScrollView x:Name="AlternativeDaysScrollView" Orientation="Horizontal" IsVisible="{Binding Day.IsExpanded}">
+        <StackLayout x:Name="AlternativeDaysStackLayout" Orientation="Horizontal" Margin="4" Spacing="0" />
+    </ScrollView>-->
+</StackLayout>

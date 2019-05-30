@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      xmlns:local="clr-namespace:ListViewIssuesXF4"
+      x:Class="ListViewIssuesXF4.MainPage"
+      x:DataType="local:MainPage">
+
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding ViewModel.DayGroups.Groups}" HasUnevenRows="True" IsGroupingEnabled="True" SelectionMode="None" ItemTapped="Activity_Tapped" SeparatorColor="Transparent">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate x:DataType="local:DayGroupViewModel">
+                    <ViewCell>
+                        <local:CalendarDayView />
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Day" />
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:ActivityViewModel">
+                    <ViewCell>
+                        <local:CalendarActivityView />
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Activity" />
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
