@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms-7642-ListView.Android", "Forms-7642-ListView\Forms-7642-ListView.Android\Forms-7642-ListView.Android.csproj", "{43AF3AA0-397E-4E68-824B-FD01B807643B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms-7642-ListView", "Forms-7642-ListView\Forms-7642-ListView\Forms-7642-ListView.csproj", "{BFAA16B3-63FD-43B9-9F5E-BD3F657D871E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43AF3AA0-397E-4E68-824B-FD01B807643B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43AF3AA0-397E-4E68-824B-FD01B807643B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43AF3AA0-397E-4E68-824B-FD01B807643B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{43AF3AA0-397E-4E68-824B-FD01B807643B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43AF3AA0-397E-4E68-824B-FD01B807643B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43AF3AA0-397E-4E68-824B-FD01B807643B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BFAA16B3-63FD-43B9-9F5E-BD3F657D871E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFAA16B3-63FD-43B9-9F5E-BD3F657D871E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFAA16B3-63FD-43B9-9F5E-BD3F657D871E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BFAA16B3-63FD-43B9-9F5E-BD3F657D871E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFAA16B3-63FD-43B9-9F5E-BD3F657D871E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFAA16B3-63FD-43B9-9F5E-BD3F657D871E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F9580EB-BD98-4DBA-836D-855EC63E29B3}
+	EndGlobalSection
+EndGlobal

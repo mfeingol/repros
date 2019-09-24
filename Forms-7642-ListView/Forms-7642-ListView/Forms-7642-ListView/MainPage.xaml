@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Forms_7642_ListView.MainPage"
+             BackgroundColor="WhiteSmoke">
+
+    <ListView ItemsSource="{Binding ViewModel.Groups}" HasUnevenRows="True" IsGroupingEnabled="True" SeparatorColor="Transparent">
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid BackgroundColor="Chartreuse">
+                        <Label Text="{Binding GroupTitle}" FontSize="Medium" />
+                        <!-- TODO - Xamarin - this is needed to get long-press to work -->
+                        <!--<Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Header_Tapped" NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>-->
+                    </Grid>
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="GroupHeaderMenuItem" />
+                    </ViewCell.ContextActions>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Label Text="{Binding ItemTitle}" />
+                    </Grid>
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="ItemMenuItem" />
+                    </ViewCell.ContextActions>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
