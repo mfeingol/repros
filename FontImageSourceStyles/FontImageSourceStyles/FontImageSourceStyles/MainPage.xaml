@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FontImageSourceStyles.MainPage"
+             Background="LightGray">
+
+    <ContentPage.Resources>
+
+        <Style TargetType="FontImageSource" ApplyToDerivedTypes="True">
+            <Setter Property="Color" Value="Blue" />
+        </Style>
+
+        <Style TargetType="Label" ApplyToDerivedTypes="True">
+            <Setter Property="TextColor" Value="Blue" />
+        </Style>
+
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Button HorizontalOptions="Center">
+            <Button.ImageSource>
+                <FontImageSource Glyph="Explicitly HotPink (works)" Size="Large" Color="HotPink" />
+            </Button.ImageSource>
+        </Button>
+
+        <Button HorizontalOptions="Center">
+            <Button.ImageSource>
+                <FontImageSource Glyph="Implicitly Blue (doesn't work)" Size="Large" />
+            </Button.ImageSource>
+        </Button>
+
+        <Label Text="Implicitly Blue (works)" FontSize="Large"  HorizontalOptions="Center" />
+
+    </StackLayout>
+
+</ContentPage>
