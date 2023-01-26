@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CarouselViewRepro"
+             x:Class="CarouselViewRepro.MainPage"
+             x:DataType="local:MainPage">
+
+    <StackLayout>
+        <Button Text="Switch" Clicked="Button_Clicked" HorizontalOptions="Center" />
+
+        <CarouselView Loop="False" ItemsSource="{Binding ViewModel.Items}" CurrentItem="{Binding ViewModel.SelectedItem}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid WidthRequest="360">
+                        <Label Text="{Binding}" />
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>
