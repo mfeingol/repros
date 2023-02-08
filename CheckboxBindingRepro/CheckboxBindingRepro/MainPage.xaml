@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CheckboxBindingRepro"
+             x:Class="CheckboxBindingRepro.MainPage"
+             x:DataType="local:MainPage">
+
+    <StackLayout>
+        <CarouselView Loop="False" ItemsSource="{Binding Items}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate x:DataType="local:MainPage">
+                    <ScrollView>
+                        <StackLayout>
+                            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" />
+                            <Label Text="Visible when checked" IsVisible="{Binding IsChecked}" />
+                        </StackLayout>
+                    </ScrollView>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <ScrollView>
+            <StackLayout>
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" />
+                <Label Text="Visible when checked" IsVisible="{Binding IsChecked}" />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>
