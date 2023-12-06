@@ -5,13 +5,6 @@
                   x:Class="NavigationPageRepro.AppFlyoutPage"
                   x:DataType="local:AppFlyoutPage">
     <FlyoutPage.Flyout>
-        <local:AppFlyoutPageMenu x:Name="appFlyoutPageMenu" />
+        <local:AppFlyoutPageMenu x:Name="Menu" />
     </FlyoutPage.Flyout>
-    <FlyoutPage.Detail>
-        <NavigationPage>
-            <x:Arguments>
-                <local:MainPage1 />
-            </x:Arguments>
-        </NavigationPage>
-    </FlyoutPage.Detail>
 </FlyoutPage>
