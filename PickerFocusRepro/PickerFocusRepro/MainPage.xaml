@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PickerFocusRepro"
+             x:Class="PickerFocusRepro.MainPage"
+             x:DataType="local:MainPage">
+
+    <TableView Intent="Settings" HasUnevenRows="True" VerticalOptions="Start" HeightRequest="700">
+        <TableRoot>
+            <TableSection>
+                <ViewCell>
+                    <VerticalStackLayout>
+                        <Label Text="Context" />
+                        <Picker ItemsSource="{Binding ThreeItems}" Title="First Picker" />
+                    </VerticalStackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <VerticalStackLayout>
+                        <Label Text="Context" />
+                        <Picker ItemsSource="{Binding ThreeItems}" Title="Second Picker" />
+                    </VerticalStackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <VerticalStackLayout>
+                        <Label Text="Context" />
+                        <Picker ItemsSource="{Binding ThreeItems}" Title="Third Picker" />
+                    </VerticalStackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <VerticalStackLayout>
+                        <Label Text="Context" />
+                        <Picker ItemsSource="{Binding OneItem}" Title="Fourth Picker" />
+                    </VerticalStackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <VerticalStackLayout>
+                        <Label Text="Context" />
+                        <Picker ItemsSource="{Binding OneItem}" Title="Fifth Picker" />
+                    </VerticalStackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <VerticalStackLayout>
+                        <Label Text="Context" />
+                        <Picker ItemsSource="{Binding OneItem}" Title="Sixth Picker" />
+                    </VerticalStackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
