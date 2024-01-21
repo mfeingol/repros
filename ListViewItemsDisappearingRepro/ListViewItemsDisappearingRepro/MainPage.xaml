@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewItemsDisappearingRepro"
+             x:Class="ListViewItemsDisappearingRepro.MainPage"
+             x:DataType="local:MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Disk space -->
+        <StackLayout Margin="8,8,8,0">
+            <Label Text="Disk Space" Style="{DynamicResource SubtitleStyle}" HorizontalOptions="Center" />
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="0.5" Margin="0,8,0,8" />
+        </StackLayout>
+
+        <Grid Grid.Row="1" Margin="8,0,8,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout>
+                <Label Text="Disk Space Used" />
+                <Label Text="25MB" FontAttributes="Bold" />
+            </StackLayout>
+
+            <Button Grid.Column="1" Text="Restart" Clicked="Restart_Clicked" HorizontalOptions="End" VerticalOptions="Center" />
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="8,0,8,0">
+            <StackLayout>
+                <Label Text="Download Queue" Style="{DynamicResource SubtitleStyle}" HorizontalOptions="Center" />
+                <BoxView HorizontalOptions="FillAndExpand" HeightRequest="0.5" Margin="0,8,0,8" />
+            </StackLayout>
+        </Grid>
+
+        <ListView Grid.Row="3" ItemsSource="{Binding ViewModel.QueuedDownloads}" HasUnevenRows="True" SelectionMode="None" Margin="8,0,8,0">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:DownloadItemViewModel">
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Cancel" IsDestructive="True" Clicked="CancelDownload_Clicked" />
+                        </ViewCell.ContextActions>
+
+                        <Grid Margin="0,4,0,4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Name}" VerticalOptions="Center" LineBreakMode="WordWrap" />
+                            <Label Grid.Column="1" Text="{Binding Description}" VerticalOptions="Center" />
+
+                            <ProgressBar Grid.Column="2" Progress="{Binding ProgressFraction}" HorizontalOptions="EndAndExpand" WidthRequest="100" Margin="16,0,0,0" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Header>
+                <Label Text="{Binding ViewModel.Status}" HorizontalOptions="Center" Margin="0,4,0,4" />
+            </ListView.Header>
+        </ListView>
+    </Grid>
+</ContentPage>
