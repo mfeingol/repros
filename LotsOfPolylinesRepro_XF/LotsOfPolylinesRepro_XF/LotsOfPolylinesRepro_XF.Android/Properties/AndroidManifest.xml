@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.lotsofpolylinesrepro_xf">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33" />
+    <application android:label="LotsOfPolylinesRepro_XF.Android" android:theme="@style/MainTheme">
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="INSERT_MAP_API_KEY_HERE" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+	</application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>
