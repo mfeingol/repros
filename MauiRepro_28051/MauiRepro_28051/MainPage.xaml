@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:MauiRepro_28051"
+             x:DataType="local:MainPage"
+             x:Class="MauiRepro_28051.MainPage"
+             Background="Purple">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Repro" Clicked="ReproToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <RefreshView>
+            <ScrollView>
+                <StackLayout BindableLayout.ItemsSource="{Binding ViewModel.Current.Folders}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="local:FolderViewModel">
+                            <mct:Expander IsExpanded="{Binding IsExpanded}">
+                                <mct:Expander.Header>
+                                    <Grid HeightRequest="40">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button Text="{Binding Name}" FontSize="Medium" TextColor="White" Margin="8,0,0,0" Padding="8" Background="Transparent">
+                                            <Button.Behaviors>
+                                                <local:LongPressBehavior Clicked="Folder_Clicked" LongPressed="Folder_LongPressed" />
+                                            </Button.Behaviors>
+                                        </Button>
+
+                                        <Button Grid.Column="1" Text="A" FontSize="Medium" TextColor="White"  Background="Transparent"
+                                                HorizontalOptions="End" VerticalOptions="Center" WidthRequest="42" Margin="0,0,8,0" />
+
+                                        <Button Grid.Column="2" Text="B" TextColor="White"  Background="Transparent"
+                                                HorizontalOptions="End" VerticalOptions="Center" WidthRequest="40" Margin="0,0,8,0" />
+
+                                        <Button Grid.Column="3" Text="C" TextColor="White"  Background="Transparent"
+                                                HorizontalOptions="End" VerticalOptions="Center" WidthRequest="40" Margin="0,0,8,0" />
+                                    </Grid>
+                                </mct:Expander.Header>
+                                <mct:Expander.Content>
+                                    <Grid>
+                                        <CollectionView ItemsSource="{Binding Items}" SelectionMode="None">
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate x:DataType="local:ItemViewModel">
+                                                    <Grid Margin="2,0,4,0">
+                                                        <Grid.Background>
+                                                            <LinearGradientBrush StartPoint="-1.75,0.5" EndPoint="1,0.5">
+                                                                <GradientStop Color="Green" Offset="0" />
+                                                                <GradientStop Color="Transparent" Offset="1" />
+                                                            </LinearGradientBrush>
+                                                        </Grid.Background>
+
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="28" />
+                                                            <ColumnDefinition Width="*" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+
+                                                        <Grid WidthRequest="8">
+                                                            <Grid IsVisible="{Binding HasColorButton}">
+                                                                <BoxView Color="Gray" />
+                                                                <Button x:Name="ColorButton" Background="Green" />
+                                                            </Grid>
+                                                        </Grid>
+
+                                                        <Button Grid.Column="1" Text="G" TextColor="White"  Background="Transparent" FontSize="Large" Padding="0" />
+
+                                                        <Button Grid.Column="2" Text="{Binding Summary}" LineBreakMode="WordWrap"
+                                                                VerticalOptions="Center" TextColor="White"  Background="Transparent" Padding="0" Margin="4,0,0,0">
+                                                            <Button.Behaviors>
+                                                                <local:LongPressBehavior Clicked="Item_Clicked" LongPressed="Item_LongPressed" />
+                                                            </Button.Behaviors>
+                                                        </Button>
+
+                                                        <Button Grid.Column="3" Text="W" TextColor="White"  VerticalOptions="Center" FontSize="Large" Padding="4" />
+
+                                                        <Button Grid.Column="4" Text="A" TextColor="White"  VerticalOptions="Center" Background="Transparent" FontSize="Large" Padding="4" />
+
+                                                        <Button Grid.Column="5" Text="L" TextColor="White"  VerticalOptions="Center" Background="Transparent" FontSize="Large" Padding="4" />
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
+                                    </Grid>
+                                </mct:Expander.Content>
+                            </mct:Expander>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+    </Grid>
+
+</ContentPage>
