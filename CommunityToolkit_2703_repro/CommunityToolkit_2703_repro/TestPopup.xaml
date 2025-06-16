@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:BooleanPopup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:CommunityToolkit_2703_repro"
+                    x:Class="CommunityToolkit_2703_repro.TestPopup" Background="DarkBlue" WidthRequest="300" HeightRequest="500">
+    <VerticalStackLayout Background="DarkRed">
+        <Label Text="2703 Repro" Style="{DynamicResource TitleStyle}" FontSize="Large" HorizontalOptions="Center" TextColor="Purple" />
+        <Button Text="Close" Clicked="CloseButton_Clicked" HorizontalOptions="Center" Margin="0,4,0,0" />
+    </VerticalStackLayout>
+</local:BooleanPopup>
