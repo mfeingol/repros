@@ -5,7 +5,12 @@ namespace CommunityToolkit_2703_repro
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TestPopup : BooleanPopup
     {
-        async Task CloseButton_Clicked(object sender, EventArgs e)
+        public TestPopup()
+        {
+            InitializeComponent();
+        }
+        
+        async void CloseButton_Clicked(object sender, EventArgs e)
         {
             HttpClient client = new();
             using HttpResponseMessage response1 = await client.GetAsync("https://www.microsoft.com");
