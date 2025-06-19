@@ -5,6 +5,11 @@ namespace CommunityToolkit_2703_repro
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TestPopup : BooleanPopup
     {
+        public TestPopup()
+        {
+            InitializeComponent();
+        }
+        
         async Task CloseButton_Clicked(object sender, EventArgs e)
         {
             HttpClient client = new();
