@@ -10,7 +10,7 @@ namespace CommunityToolkit_2703_repro
             InitializeComponent();
         }
         
-        async Task CloseButton_Clicked(object sender, EventArgs e)
+        async void CloseButton_Clicked(object sender, EventArgs e)
         {
             HttpClient client = new();
             using HttpResponseMessage response1 = await client.GetAsync("https://www.microsoft.com");
