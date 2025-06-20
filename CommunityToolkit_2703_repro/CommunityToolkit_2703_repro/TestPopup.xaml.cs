@@ -16,7 +16,9 @@ namespace CommunityToolkit_2703_repro
             using HttpResponseMessage response1 = await client.GetAsync("https://www.microsoft.com");
             using HttpResponseMessage response2 = await client.GetAsync("https://www.google.com");
 
+            GC.Collect();
             await this.CloseAsync(true);
+            GC.Collect();
         }
     }
 

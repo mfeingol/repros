@@ -4,9 +4,9 @@
                     xmlns:local="clr-namespace:CommunityToolkit_2703_repro"
                     x:Class="CommunityToolkit_2703_repro.TestPopup"
                     x:DataType="local:TestPopup"
-                    Background="DarkBlue" WidthRequest="300" HeightRequest="500">
+                    Background="Purple">
     <VerticalStackLayout Background="DarkRed">
-        <Label Text="2703 Repro" Style="{DynamicResource TitleStyle}" FontSize="Large" HorizontalOptions="Center" TextColor="Purple" />
+        <Label Text="2703 Repro" Style="{DynamicResource TitleStyle}" FontSize="Large" HorizontalOptions="Center" TextColor="Yellow" />
         <Button Text="Close" Clicked="CloseButton_Clicked" HorizontalOptions="Center" Margin="0,4,0,0" />
     </VerticalStackLayout>
 </local:BooleanPopup>
