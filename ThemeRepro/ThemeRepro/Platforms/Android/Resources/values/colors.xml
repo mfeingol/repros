@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <color name="blue_sideroads">#1070CC</color>
+  <color name="blue500">#2196F3</color>
+  <color name="blue600">#1E88E5</color>
+  <color name="blue700">#1976D2</color>
+  <color name="blue800">#0277BD</color>
+  <color name="blue900">#0D47A1</color>
+  <color name="gray200">#EEEEEE</color>
+  <color name="gray800">#424242</color>
+  <color name="indigo800">#4527A0</color>
+  <color name="indigo900">#1A237E</color>
+  <color name="indigo900_adjusted">#111754</color>
+  <color name="red500">#F44336</color>
+  <color name="red900">#B71C1C</color>
+  <color name="red900_darker">#751212</color>
+  <color name="white">#FFFFFF</color>
+  <color name="red900_adjusted">#A0B71C1C</color>
+  <color name="blue900_adjusted">#A00D47A1</color>
+</resources>

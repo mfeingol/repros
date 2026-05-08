@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <style name="CustomTheme" parent="Maui.MainTheme.NoActionBar">
+	<!-- Already set by Maui.MainTheme.NoActionBar -->
+    <!--<item name="windowNoTitle">true</item>-->
+    <!--<item name="windowActionModeOverlay">true</item>-->
+    <!--<item name="windowActionBar">false</item>-->
+
+    <!-- Ideally we'd inherit from Maui.SplashTheme, but that ruins our customizations. As does this setting -->
+    <!--<item name="maui_splash">true</item>-->
+    <item name="android:windowBackground">@drawable/maui_splash</item>
+    <!--
+      Android 12+ specific settings
+      See: https://developer.android.com/guide/topics/ui/splash-screen#set-theme
+    -->
+    <item name="android:windowSplashScreenBackground">@color/blue_sideroads</item>
+    <item name="android:windowSplashScreenAnimatedIcon">@drawable/maui_splash</item>
+
+    <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
+    <!-- colorPrimary is used for the default action bar background -->
+    <item name="colorPrimary">@color/red900</item><!-- TabbedPage underline color, status bar color if no overlay is drawn -->
+    <!-- colorAccent is used as the default value for colorControlActivated which is used to tint widgets -->
+    <item name="colorAccent">@color/red500</item>
+    <!-- colorLongPressedHighlight is used for highlighted cells -->
+    <item name="android:colorLongPressedHighlight">@color/red900_adjusted</item>
+    <!-- You can also set colorControlNormal, colorControlActivated, colorControlHighlight and colorSwitchThumbNormal. -->
+    <item name="android:colorActivatedHighlight">@color/red900_adjusted</item>
+
+    <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+
+    <item name="actionMenuTextColor">@drawable/menuitem_white_text_color_night</item>
+    <item name="actionOverflowMenuStyle">@style/ActionOverflowMenuStyle</item>
+    <item name="actionOverflowButtonStyle">@style/ActionOverflowMenuButtonStyle</item>
+    <item name="actionModeStyle">@style/ActionModeStyle</item>
+    <item name="actionBarTheme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item><!-- Needed for ActionModeStyle/titleTextStyle to work -->
+    <item name="actionModeCloseButtonStyle">@style/ActionModeCloseButtonStyle</item>
+    <item name="actionBarPopupTheme">@style/ActionBarPopupTheme</item>
+  </style>
+
+  <style name="ActionOverflowMenuStyle" parent="@style/Widget.MaterialComponents.PopupMenu.Overflow">
+    <item name="android:popupBackground">@color/indigo900</item>
+  </style>
+  <style name="ActionOverflowMenuButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+    <item name="android:tint">@color/white</item>
+  </style>
+  <style name="ActionModeStyle" parent="@style/Widget.MaterialComponents.ActionMode">
+    <item name="background">@color/red900_darker</item>
+    <item name="titleTextStyle">@drawable/menuitem_white_text_color_night</item>
+  </style>
+  <style name="ActionModeCloseButtonStyle" parent="Widget.AppCompat.ActionButton.CloseMode">
+    <item name="android:tint">@color/white</item>
+  </style>
+  <style name="ActionBarPopupTheme" parent="@style/Widget.AppCompat.ListPopupWindow">
+	<item name="android:background">@color/red900_darker</item>
+  </style>
+
+  <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+    <item name="colorPrimary">@color/red500</item><!-- Picker cancel button text color -->
+    <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialogBodyTextStyle</item>
+  </style>
+  <style name="MaterialAlertDialogBodyTextStyle" parent="@style/MaterialAlertDialog.MaterialComponents.Body.Text">
+    <item name="android:textColor">@color/gray200</item><!-- Picker item text color -->
+  </style>
+</resources>

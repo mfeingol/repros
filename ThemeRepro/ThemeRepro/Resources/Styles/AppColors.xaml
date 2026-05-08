@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="Red100">#FFCDD2</Color>
+    <Color x:Key="Red200">#EF9A9A</Color>
+    <Color x:Key="Red400">#EF5350</Color>
+    <Color x:Key="RedA400">#FF1744</Color>
+    <Color x:Key="Red500">#F44336</Color>
+    <Color x:Key="Red700">#D32F2F</Color>
+    <Color x:Key="Red900_VeryDark">#5B0E0E</Color>
+
+    <Color x:Key="PinkA200">#FF4081</Color>
+    <Color x:Key="Pink400">#EC407A</Color>
+    <Color x:Key="Pink500">#E91E63</Color>
+    <Color x:Key="Pink900">#880E4F</Color>
+
+    <Color x:Key="Gray50">#FAFAFA</Color>
+    <Color x:Key="Gray100">#F5F5F5</Color>
+    <Color x:Key="Gray200">#EEEEEE</Color>
+    <Color x:Key="Gray300">#E0E0E0</Color>
+    <Color x:Key="Gray300_Translucent">#7FE0E0E0</Color>
+    <Color x:Key="Gray400">#BDBDBD</Color>
+    <Color x:Key="Gray500">#9E9E9E</Color>
+    <Color x:Key="Gray600">#757575</Color>
+    <Color x:Key="Gray700">#616161</Color>
+    <Color x:Key="Gray700_Translucent">#7F616161</Color>
+    <Color x:Key="Gray800">#424242</Color>
+    <Color x:Key="Gray850">#313131</Color>
+    <Color x:Key="Gray900">#212121</Color>
+    <Color x:Key="Gray950">#141414</Color>
+
+    <Color x:Key="Blue100">#BBDEFB</Color>
+    <Color x:Key="Blue500">#2196F3</Color>
+    <Color x:Key="Blue600">#1E88E5</Color>
+    <Color x:Key="Blue700">#0288D1</Color>
+    <Color x:Key="Blue800">#0277BD</Color>
+
+    <Color x:Key="Indigo800">#283593</Color>
+    <Color x:Key="Indigo900">#1A237E</Color>
+
+    <Color x:Key="SplashColor">#1070CC</Color>
+
+    <!-- Handler colors -->
+    <Color x:Key="Light_TextCellTextColor">#FF4081</Color><!-- Pink A200 -->
+    <Color x:Key="Dark_TextCellTextColor">#FF4081</Color><!-- Pink A200 -->
+    <Color x:Key="Light_TextCellDetailColor">#757575</Color><!-- Gray 600 -->
+    <Color x:Key="Dark_TextCellDetailColor">#E0E0E0</Color><!-- Gray 300 -->
+
+    <Color x:Key="Light_RadioButtonSelectedCircleColor">#F0EF5350</Color><!-- Red 400 -->
+    <Color x:Key="Dark_RadioButtonSelectedCircleColor">#F0EF5350</Color><!-- Red 400 -->
+    <Color x:Key="Light_RadioButtonUnselectedCircleColor">#757575</Color><!-- Gray 600 -->
+    <Color x:Key="Dark_RadioButtonUnselectedCircleColor">#E0E0E0</Color><!-- Gray 300 -->
+
+    <Color x:Key="Light_SwitchTrackOffColor">#BDBDBD</Color><!-- Gray 400 -->
+    <Color x:Key="Dark_SwitchTrackOffColor">#757575</Color><!-- Gray 600 -->
+
+    <Color x:Key="Light_MarkdownTextColor">#757575</Color><!-- Gray 600 -->
+    <Color x:Key="Dark_MarkdownTextColor">#E0E0E0</Color><!-- Gray 300 -->
+
+    <!-- Accent -->
+    <Color x:Key="Light_AccentColor">#FF4081</Color><!-- Pink A200 -->
+    <Color x:Key="Dark_AccentColor">#FF4081</Color><!-- Pink A200 -->
+
+    <!-- LongPressedHighlight -->
+    <Color x:Key="Light_LongPressedHighlight">#A00D47A1</Color><!-- Blue 900 adjusted -->
+    <Color x:Key="Dark_LongPressedHighlight">#A0B71C1C</Color><!-- Red 900 adjusted -->
+
+    <!-- Shell -->
+    <Color x:Key="Light_StatusBarColor">#1E88E5</Color><!-- Blue 600 -->
+    <Color x:Key="Dark_StatusBarColor">#1A237E</Color><!-- Indigo 900 -->
+
+    <Color x:Key="Light_ShellBannerColor">#03A9F4</Color><!-- Light Blue 500 -->
+    <Color x:Key="Dark_ShellBannerColor">#1A237E</Color><!-- Indigo 900 -->
+
+    <Color x:Key="Light_ShellBannerTextColor">#01579B</Color><!-- Light Blue 900 -->
+    <Color x:Key="Dark_ShellBannerTextColor">#EEEEEE</Color><!-- Gray 200 -->
+
+    <Color x:Key="Light_ShellTextColor">#757575</Color><!-- Gray 600 -->
+    <Color x:Key="Dark_ShellTextColor">#E0E0E0</Color><!-- Gray 300 -->
+
+    <SolidColorBrush x:Key="Light_ShellTextColorBrush" Color="{StaticResource Light_ShellTextColor}" />
+    <SolidColorBrush x:Key="Dark_ShellTextColorBrush" Color="{StaticResource Dark_ShellTextColor}" />
+
+    <Color x:Key="Light_ShellBackgroundColor">White</Color>
+    <Color x:Key="Dark_ShellBackgroundColor">Black</Color>
+
+    <Color x:Key="Light_SnackbarTextColor">#212121</Color><!-- Gray 900 -->
+    <Color x:Key="Dark_SnackbarTextColor">#E0E0E0</Color><!-- Gray 300 -->
+
+    <Color x:Key="Light_SnackbarBackgroundColor">#EFE0E0E0</Color><!-- Gray 300 slightly transparent -->
+    <Color x:Key="Dark_SnackbarBackgroundColor">#EF212121</Color><!-- Gray 900 slightly transparent -->
+
+    <Color x:Key="Light_SnackbarActionTextColor">#F44336</Color><!-- Red 500 -->
+    <Color x:Key="Dark_SnackbarActionTextColor">#F44336</Color><!-- Red 500 -->
+
+    <!-- Separators -->
+    <Color x:Key="Light_SeparatorColor">#BDBDBD</Color><!-- Gray 400 -->
+    <Color x:Key="Dark_SeparatorColor">#757575</Color><!-- Gray 600 -->
+
+    <!-- Background -->
+    <Color x:Key="Light_LightBackgroundColor">#FAFAFA</Color><!-- Gray 50 -->
+    <Color x:Key="Dark_LightBackgroundColor">#212121</Color><!-- Gray 900 -->
+
+    <Color x:Key="Light_TranslucentBackgroundColor">#5FFFFFFF</Color>
+    <Color x:Key="Dark_TranslucentBackgroundColor">#5F7F7F7F</Color>
+
+    <Color x:Key="Light_BlockingActivityIndicatorBackgroundColor">#757575</Color><!-- Gray 600 -->
+    <Color x:Key="Dark_BlockingActivityIndicatorBackgroundColor">Black</Color>
+
+    <!-- Group Headers-->
+    <Color x:Key="Light_GroupHeaderBackgroundColor">#03A9F4</Color><!-- Light Blue 500 -->
+    <Color x:Key="Dark_GroupHeaderBackgroundColor">#1A237E</Color><!-- Indigo 900 -->
+
+    <Color x:Key="Light_GroupHeaderTextColor">White</Color>
+    <Color x:Key="Dark_GroupHeaderTextColor">#E0E0E0</Color><!-- Gray 300 -->
+
+    <Color x:Key="Light_GroupHeaderSubtitleBackgroundColor">#BBDEFB</Color><!-- Blue 100 -->
+    <Color x:Key="Dark_GroupHeaderSubtitleBackgroundColor">#01579B</Color><!-- Blue 900 -->
+
+    <!-- ContentPage -->
+    <SolidColorBrush x:Key="Light_LabelTextColorSolidColorBrush" Color="{StaticResource Gray600}" />
+    <SolidColorBrush x:Key="Dark_LabelTextColorSolidColorBrush" Color="{StaticResource Gray300}" />
+
+    <!-- Miscellaneous -->
+    <Color x:Key="Light_TripBackgroundColor">#757575</Color><!-- Gray 600 -->
+    <Color x:Key="Dark_TripBackgroundColor">#757575</Color><!-- Gray 600 -->
+
+    <Color x:Key="Light_GraphFrameColor">#2196F3</Color><!-- Blue 500 -->
+    <Color x:Key="Dark_GraphFrameColor">#2196F3</Color><!-- Blue 500 -->
+
+    <Color x:Key="Light_ClearActivityTabColor">#BDBDBD</Color><!-- Gray 400 -->
+    <Color x:Key="Dark_ClearActivityTabColor">#424242</Color><!-- Gray 800 -->
+
+    <Color x:Key="Light_WarningTextColor">#DAA520</Color><!-- Goldenrod -->
+    <Color x:Key="Dark_WarningTextColor">#FFD700</Color><!-- Gold -->
+
+    <Color x:Key="Light_ToggleButtonSelectedBackgroundColor">#BBDEFB</Color><!-- Blue 100 -->
+    <Color x:Key="Dark_ToggleButtonSelectedBackgroundColor">#0277BD</Color><!-- Blue 800 -->
+
+    <Color x:Key="Light_ToggleButtonNormalBackgroundColor">#BDBDBD</Color><!-- Gray 400 -->
+    <Color x:Key="Dark_ToggleButtonNormalBackgroundColor">#616161</Color><!-- Gray 700 -->
+
+    <Color x:Key="Light_ToggleButtonDisabledBackgroundColor">#BDBDBD</Color><!-- Gray 400 -->
+    <Color x:Key="Dark_ToggleButtonDisabledBackgroundColor">#616161</Color><!-- Gray 700 -->
+
+    <Color x:Key="Light_ToggleButtonSelectedTextColor">#424242</Color><!-- Gray 800-->
+    <Color x:Key="Dark_ToggleButtonSelectedTextColor">#E0E0E0</Color><!-- Gray 300 -->
+
+    <Color x:Key="Light_ToggleButtonNormalTextColor">#424242</Color><!-- Gray 800 -->
+    <Color x:Key="Dark_ToggleButtonNormalTextColor">#E0E0E0</Color><!-- Gray 300 -->
+
+    <Color x:Key="Light_ToggleButtonDisabledTextColor">#141414</Color><!-- Gray 950 -->
+    <Color x:Key="Dark_ToggleButtonDisabledTextColor">#9E9E9E</Color><!-- Gray 500 -->
+
+    <Color x:Key="Light_PickerUnderlineColor">#424242</Color><!-- Gray 800 -->
+    <Color x:Key="Dark_PickerUnderlineColor">#E0E0E0</Color><!-- Gray 300 -->
+
+    <Color x:Key="Light_SearchBarSearchButtonColor">#424242</Color><!-- Gray 800 -->
+    <Color x:Key="Dark_SearchBarSearchButtonColor">#BDBDBD</Color><!-- Gray 400 -->
+
+    <Color x:Key="Light_SearchBarUnderlineColor">#424242</Color><!-- Gray 800 -->
+    <Color x:Key="Dark_SearchBarUnderlineColor">#F5F5F5</Color><!-- Gray 100 -->
+
+    <Color x:Key="Light_ChartFrameColor">#2196F3</Color><!-- Blue 500 -->
+    <Color x:Key="Dark_ChartFrameColor">#2196F3</Color><!-- Blue 500 -->
+
+    <Color x:Key="Light_ChartTextColor">#757575</Color><!-- Gray 600 -->
+    <Color x:Key="Dark_ChartTextColor">#E0E0E0</Color><!-- Gray 300 -->
+
+</ResourceDictionary>

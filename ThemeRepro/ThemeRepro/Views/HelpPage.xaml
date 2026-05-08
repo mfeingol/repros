@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:local="clr-namespace:ThemeRepro"
+                Title="Help"
+                x:Class="ThemeRepro.HelpPage"
+                x:DataType="local:HelpPage">
+    <Grid RowDefinitions="Auto,*">
+        <Label Text="Loading WebView..." Style="{DynamicResource TitleStyle}" />
+        <WebView Source="https://www.microsoft.com" Grid.Row="2" />
+    </Grid>
+</ContentPage>

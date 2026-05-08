@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:local="clr-namespace:ThemeRepro"
+                Title="Main"
+                x:Class="ThemeRepro.ShellPageFlyout"
+                x:DataType="local:ShellPageFlyout">
+    <VerticalStackLayout>
+        <Button Clicked="Help_Clicked" Background="Transparent" Text="Help" FontSize="42" />
+        <Button Clicked="Settings_Clicked" Background="Transparent" Text="Settings" FontSize="42" />
+        <Button Clicked="Random_Clicked" Background="Transparent" Text="Random" FontSize="42" />
+    </VerticalStackLayout>
+</ContentPage>
