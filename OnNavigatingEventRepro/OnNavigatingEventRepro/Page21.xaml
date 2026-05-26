@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:local="clr-namespace:OnNavigatingEventRepro"
+                       x:Class="OnNavigatingEventRepro.Page21"
+                       Title="Page2.1">
+    <VerticalStackLayout>
+        <Button Text="Goto Page 2.1.1" Clicked="Page211Button_Clicked" />
+    </VerticalStackLayout>
+</local:ContentPageBase>
