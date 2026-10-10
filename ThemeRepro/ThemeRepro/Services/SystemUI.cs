@@ -1,7 +1,5 @@
-﻿using Platform = Microsoft.Maui.ApplicationModel.Platform;
-using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+﻿using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using Microsoft.Maui.Platform;
-using Android.OS;
 using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
@@ -30,7 +28,7 @@ namespace ThemeRepro
 
         static void SetStatusBarColor(Color statusBarColor)
         {
-            Android.App.Activity activity = Platform.CurrentActivity;
+            Android.App.Activity activity = Microsoft.Maui.ApplicationModel.Platform.CurrentActivity;
             Android.Views.Window window = activity?.Window;
             if (window != null)
             {
@@ -76,7 +74,7 @@ namespace ThemeRepro
         static void SetNavigationBarColor(Color color)
         {
 #pragma warning disable CA1422
-            Platform.CurrentActivity?.Window.SetNavigationBarColor(color.ToPlatform());
+            Microsoft.Maui.ApplicationModel.Platform.CurrentActivity?.Window.SetNavigationBarColor(color.ToPlatform());
 #pragma warning restore CA1422
         }
 

@@ -7,6 +7,6 @@
                 x:DataType="local:HelpPage">
     <Grid RowDefinitions="Auto,*">
         <Label Text="Loading WebView..." Style="{DynamicResource TitleStyle}" />
-        <WebView Source="https://www.microsoft.com" Grid.Row="2" />
+        <WebView Source="https://www.microsoft.com" Grid.Row="2" Navigated="WebView_Navigated"/>
     </Grid>
 </ContentPage>
