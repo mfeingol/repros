@@ -1,0 +1,11 @@
+<Shell
+    x:Class="CommunityToolkitMauiNavigationBarThemeRepro.AppShell"
+    xmlns:local="clr-namespace:CommunityToolkitMauiNavigationBarThemeRepro"
+    Title="CommunityToolkitMauiNavigationBarThemeRepro">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>
